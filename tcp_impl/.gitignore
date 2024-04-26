@@ -1,0 +1,14 @@
+# Build
+__pycache__
+tmp/
+
+# Environments
+#.env
+.venv*
+env/
+venv/
+
+# Setuptools caching
+build
+dist
+*.egg-info
