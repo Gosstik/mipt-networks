@@ -100,12 +100,6 @@ def test_large_message(msg_size):
     setup_netem(packet_loss=0.02, duplicate=0.02, reorder=0.01)
     run_test(EchoClient, EchoServer, iterations=2, msg_size=msg_size)
 
-@pytest.mark.parametrize("msg_size", [100, 1300, 10_000, 100_000])
-@pytest.mark.timeout(180)
-def test_large_message(msg_size):
-    setup_netem(packet_loss=0, duplicate=0, reorder=0)
-    run_test(EchoClient, EchoServer, iterations=2, msg_size=msg_size)
-
 
 @pytest.mark.parametrize("iterations", [10, 1000, 5000])
 # @pytest.mark.parametrize("iterations", [10, 20, 50, 100])
